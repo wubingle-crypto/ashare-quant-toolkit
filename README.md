@@ -18,6 +18,10 @@
 
 系统自动获取实时行情 ✓ 执行交易 ✓ 记录净值 ✓ 生成HTML投资研报 ✓
 
+> 🚀 **从零到一：5大策略每日 PK，百万模拟资金同台竞技，一键生成完整投资研报。**
+> **适合人群：A股量化入门者、策略研究员、对 AI 选股感兴趣的同学。**
+> **开源 · 纯 Python · 中国网络友好 · 即装即用**
+
 ### ✨ 功能特性
 
 | 特性 | 说明 |
@@ -30,6 +34,17 @@
 | 🗄️ **独立数据库** | 每个策略独立 SQLite 数据库文件，便于分析 |
 | 🐍 **纯 Python** | 依赖简洁，pip install 即可使用 |
 | 🌐 **中国网络友好** | 所有数据源在中国大陆网络均可正常访问 |
+
+### 🎮 一分钟 Demo — 2行代码获取实时行情
+
+```python
+from ashare_quant_toolkit.data_fetcher import fetch_tencent_realtime_as_df
+
+df = fetch_tencent_realtime_as_df(["000001", "000333", "000858", "002594", "600519"])
+print(df[["name", "close", "change_pct"]])
+```
+
+运行 `python demo.py` 即可看到效果，无需任何 API Key！
 
 ### 🚀 快速开始
 
